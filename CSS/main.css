@@ -382,6 +382,7 @@ footer .social ul li a {
     width: 100%;
     padding: 15px;
     height: 60px;
+    z-index: 100;
   }
   .close-mobile-mene {
     display: block;
@@ -391,6 +392,7 @@ footer .social ul li a {
     content: " ";
     top: 30%;
     right: 2%;
+    z-index: 100;
   }
   header nav::before {
     position: absolute;
