@@ -381,7 +381,7 @@ footer .social ul li a {
     position: relative;
     width: 100%;
     padding: 15px;
-    height: 60px;
+    /* height: 60px; */
     z-index: 100;
   }
   .close-mobile-mene {
