@@ -377,21 +377,21 @@ footer .social ul li a {
     width: 5%;
     cursor: pointer;
   }
-  .close-mobile {
+  /* .close-mobile {
     position: relative;
     width: 100%;
     padding: 15px;
-    /* height: 60px; */
+    height: 60px;
     z-index: 100;
-  }
+  } */
   .close-mobile-mene {
     display: block;
     width: 4%;
     cursor: pointer;
     position: absolute;
     content: " ";
-    top: 30%;
-    left: 2%;
+    top: 5%;
+    right: 2%;
     z-index: 100;
   }
   header nav::before {
@@ -430,6 +430,7 @@ footer .social ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
   }
   header .container nav ul li {
     margin-right: 0;
@@ -491,23 +492,10 @@ footer .social ul li a {
 
 @media screen and (max-width: 480px) {
   .mobile-menu {
-    display: block;
     width: 8%;
-    cursor: pointer;
-  }
-  .close-mobile {
-    position: relative;
-    width: 100%;
-    padding: 15px;
   }
   .close-mobile-mene {
-    display: block;
     width: 8%;
-    cursor: pointer;
-    position: absolute;
-    content: " ";
-    top: 30%;
-    right: 5%;
   }
   .banner h1 {
     font-size: 3rem;
@@ -568,23 +556,10 @@ footer .social ul li a {
 
 @media screen and (max-width: 320px) {
   .mobile-menu {
-    display: block;
     width: 9%;
-    cursor: pointer;
-  }
-  .close-mobile {
-    position: relative;
-    width: 100%;
-    padding: 15px;
   }
   .close-mobile-mene {
-    display: block;
     width: 7%;
-    cursor: pointer;
-    position: absolute;
-    content: " ";
-    top: 30%;
-    right: 2%;
   }
   .banner h1 {
     font-size: 2rem;
