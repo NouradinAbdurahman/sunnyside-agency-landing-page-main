@@ -422,6 +422,7 @@ footer .social ul li a {
     top: 130%;
     left: 3%;
     background-color: var(--White);
+    background-color: darkgrey;
 }
   header ul {
     width: 100%;
