@@ -63,8 +63,14 @@ header .container {
 
 header .logo img {
   user-select: none;
+  width: 100%;
 }
-
+.mobile-menu {
+  display: none;
+}
+.close-mobile-mene {
+  display: none;
+}
 header nav ul {
   display: flex;
   align-items: center;
@@ -115,7 +121,8 @@ header nav ul button a {
 }
 
 .banner img {
-  margin-top: 85px;
+  margin-top: 80px;
+  user-select: none;
 }
 
 /* services */
@@ -365,8 +372,76 @@ footer .social ul li a {
 /* Media Query */
 
 @media screen and (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+    width: 5%;
+    cursor: pointer;
+  }
+  .close-mobile {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    height: 60px;
+  }
+  .close-mobile-mene {
+    display: block;
+    width: 4%;
+    cursor: pointer;
+    position: absolute;
+    content: " ";
+    top: 30%;
+    right: 2%;
+  }
+  header nav::before {
+    position: absolute;
+    content: " ";
+    top: -7%;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 25px solid rgb(0, 0, 0);
+    border-color: transparent var(--White)  transparent transparent;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    z-index: 100;
+  }
+  header nav.active {
+    display: block;
+  }
   header nav {
     display: none;
+    position: absolute;
+    content: " ";
+    width: 95%;
+    height: 350px;
+    top: 130%;
+    background-color: var(--White);
+  }
+  header ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .container nav ul li {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  header .container nav ul li a {
+    font-size: 1.5rem;
+    color: var(--Dark-grayish-blue);
+  }
+  header nav ul button {
+    padding: 20px;
+    background-color: var(--Yellow);
+  }
+  header .container nav ul button a {
+    font-size: 18px;
   }
   .services-1 .container .text h1,
   .services-2 .container .text h1 {
@@ -412,6 +487,12 @@ footer .social ul li a {
 }
 
 @media screen and (max-width: 480px) {
+  .mobile-menu {
+    width: 8%;
+  }
+  .close-mobile-mene {
+    width: 6%;
+  }
   .banner h1 {
     font-size: 3rem;
   }
@@ -470,6 +551,12 @@ footer .social ul li a {
 }
 
 @media screen and (max-width: 320px) {
+  .mobile-menu {
+    width: 9%;
+  }
+  .close-mobile-mene {
+    width: 7%;
+  }
   .banner h1 {
     font-size: 2rem;
   }
