@@ -391,7 +391,7 @@ footer .social ul li a {
     position: absolute;
     content: " ";
     top: 30%;
-    right: 2%;
+    left: 2%;
     z-index: 100;
   }
   header nav::before {
@@ -420,6 +420,7 @@ footer .social ul li a {
     width: 95%;
     height: 350px;
     top: 130%;
+    left: 3%;
     background-color: var(--White);
 }
   header ul {
