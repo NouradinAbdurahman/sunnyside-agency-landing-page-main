@@ -14,7 +14,11 @@
       <div class="logo">
         <a href="./index.html"><img src="./images/logo.svg" alt="logo"></a>
       </div>
+      <img src="./images/icon-hamburger.svg" class="mobile-menu" id="open-menu" alt="icon-hamburger">
       <nav>
+       <div class="close-mobile">
+        <img src="./images/close.svg" class="close-mobile-mene" id="close-menu" alt="close-menu">
+       </div>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -31,7 +35,7 @@
     <div class="container">
       <h1>We are creatives</h1>
       <!-- img -->
-      <img src="./images/icon-arrow-down.svg" alt="arrow-down">
+      <a href="#services"><img src="./images/icon-arrow-down.svg" draggable="false" alt="arrow-down"></a>
     </div>
   </section>
 
@@ -136,5 +140,17 @@
       </ul>
     </div>
   </footer>
+
+  <script>
+    const menuBtn = document.getElementById("open-menu");
+    const closeBtn = document.getElementById("close-menu");
+    const nav = document.querySelector("nav");
+    menuBtn.addEventListener('click',() =>{
+    nav.classList.add('active');
+  })
+    closeBtn.addEventListener('click',() =>{
+    nav.classList.remove('active');
+  })
+  </script>
 </body>
 </html>
