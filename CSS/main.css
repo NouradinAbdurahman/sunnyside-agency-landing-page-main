@@ -68,7 +68,7 @@ header .logo img {
 .mobile-menu {
   display: none;
 }
-.close-mobile-mene {
+.close-mobile-menu {
   display: none;
 }
 header nav ul {
@@ -382,17 +382,10 @@ footer .social ul li a {
     width: 100%;
     padding: 15px;
     z-index: 100;
-    margin-top: 25px;
-    background-color: rgb(230, 238, 120);
+    text-align: end;
   }
-  .close-mobile-mene {
-    display: block;
-    width: 4%;
-    cursor: pointer;
-    position: absolute;
-    content: " ";
-    top: 10%;
-    right: 1%;
+  .close-mobile i {
+    font-size: 2rem;
   }
   header nav::before {
     position: absolute;
@@ -494,9 +487,6 @@ footer .social ul li a {
   .mobile-menu {
     width: 8%;
   }
-  .close-mobile-mene {
-    width: 8%;
-  }
   .banner h1 {
     font-size: 3rem;
   }
@@ -557,9 +547,6 @@ footer .social ul li a {
 @media screen and (max-width: 320px) {
   .mobile-menu {
     width: 9%;
-  }
-  .close-mobile-mene {
-    width: 7%;
   }
   .banner h1 {
     font-size: 2rem;
