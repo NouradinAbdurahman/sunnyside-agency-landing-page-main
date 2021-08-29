@@ -34,6 +34,9 @@ a {
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-size: 18px;
   font-family: "Fraunces", serif;
@@ -62,9 +65,6 @@ header .logo img {
   user-select: none;
 }
 
-header nav {
-}
-
 header nav ul {
   display: flex;
   align-items: center;
@@ -87,6 +87,11 @@ header nav ul button {
   border: none;
   border-radius: 25px;
   padding: 13px 24px;
+  font-family: "Fraunces", serif;
+  cursor: pointer;
+}
+header nav ul button a {
+  color: var(--Black);
 }
 
 /* banner */
@@ -145,8 +150,8 @@ header nav ul button {
   font-weight: 700;
   font-family: "Fraunces", serif;
   margin-bottom: 40px;
+  color: var(--Very-dark-desaturated-blue);
 }
-
 .services-1 .container .text p,
 .services-2 .container .text p {
   color: grey;
@@ -166,7 +171,7 @@ header nav ul button {
 .services-1 .container .text .cta,
 .services-2 .container .text .cta {
   font-weight: 700;
-  color: var(--Black);
+  color: var(--Very-dark-desaturated-blue);
   text-transform: uppercase;
   font-family: "Fraunces", "sans-serif";
   cursor: pointer;
@@ -193,13 +198,16 @@ header nav ul button {
   margin: -10px 0;
   border-radius: 25px;
 }
-.services-3 .container {
+.services-3 {
+  width: 100%;
+}
+.services-3-content {
   width: 100%;
   height: 600px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.services-3 .container .left {
+.services-3 .services-3-content .left {
   background-image: url("../images/desktop/image-graphic-design.jpg");
   text-align: center;
   user-select: none;
@@ -211,7 +219,7 @@ header nav ul button {
   justify-content: center;
 }
 
-.services-3 .container .right {
+.services-3 .services-3-content .right {
   background-image: url("../images/desktop/image-photography.jpg");
   text-align: center;
   user-select: none;
@@ -223,22 +231,37 @@ header nav ul button {
   justify-content: center;
 }
 
-.services-3 .container .left .text,
-.services-3 .container .right .text {
+.services-3 .services-3-content .left .text,
+.services-3 .services-3-content .right .text {
   position: absolute;
   top: 350px;
   width: 70%;
 }
 
-.services-3 .container .left .text h1,
-.services-3 .container .right .text h1 {
+.services-3 .services-3-content .left .text h1,
+.services-3 .services-3-content .right .text h1 {
   margin: 35px auto 40px;
   font-family: "Fraunces", serif;
   font-weight: 900;
 }
+.services-3 .services-3-content .left .text h1 {
+  color: var(--Dark-desaturated-cyan-graphic-design-text);
+}
+.services-3 .services-3-content .left .text p {
+  color: var(--Dark-desaturated-cyan-graphic-design-text);
+}
+
+.services-3 .services-3-content .right .text h1 {
+  color: var(--Dark-blue-photography-text);
+}
+.services-3 .services-3-content .right .text p {
+  color: var(--Dark-blue-photography-text);
+}
 
 /* END SECTION */
 
+
+/* Client */
 .client {
   width: 100%;
   margin-bottom: 100px;
@@ -294,10 +317,13 @@ header nav ul button {
   color: var(--Grayish-blue);
 }
 
+
+/* Footer Gallery */
 .footer-gallery {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  user-select: none;
 }
 .footer-gallery img {
   width: 100%;
@@ -305,12 +331,10 @@ header nav ul button {
 footer {
   text-align: center;
   background: var(--Dark-moderate-cyan-footer);
-  background: var(--Dark-moderate-cyan-footer);
 }
 .footer-title {
   font-weight: bolder;
   padding: 80px 0 20px 0;
-  color: var(--Dark-moderate-cyan-footer);
   color: var(--Dark-desaturated-cyan-graphic-design-text);
 }
 footer .footer-unorder-list {
@@ -334,11 +358,48 @@ footer .social ul li a {
   color: var(--Dark-blue-photography-text);
 }
 
+/* End Section */
+
+
+
 /* Media Query */
 
 @media screen and (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  .services-1 .container .text h1,
+  .services-2 .container .text h1 {
+    font-size: 2rem;
+  }
+  .services-1 .container .text,
+  .services-2 .container .text {
+    margin: 50px 25px 50px 25px;
+    text-align: center;
+  }
+  .services-1 .container .text div,
+  .services-2 .container .text div {
+    width: 100%;
+    align-items: center;
+  }
+  .services-3-content {
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }  
+
+  .services-3 .services-3-content .left .text,
+  .services-3 .services-3-content .right .text {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    padding: 30px;
+  }
   .client-content {
     width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .client-card span {
     display: block;
@@ -346,10 +407,51 @@ footer .social ul li a {
   .client-card {
     width: 100%;
     text-align: center;
+    margin-bottom: 100px;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .banner h1 {
+    font-size: 3rem;
+  }
+  .services-1 .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .services-2 .container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .services-1 .container .text h1,
+  .services-2 .container .text h1 {
+    font-size: 2rem;
+  }
+  .services-1 .container .text,
+  .services-2 .container .text {
+    margin: 50px 25px 50px 25px;
+    text-align: center;
+  }
+  .services-1 .container .text div,
+  .services-2 .container .text div {
+    width: 100%;
+    align-items: center;
+  }
+  .services-3-content {
+    width: 100%;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }  
+
+  .services-3 .services-3-content .left .text,
+  .services-3 .services-3-content .right .text {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    padding: 30px;
+  }
   .client-title {
     font-size: 1.3rem;
   }
@@ -368,6 +470,13 @@ footer .social ul li a {
 }
 
 @media screen and (max-width: 320px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+  .services-1 .container .text h1,
+  .services-2 .container .text h1 {
+    font-size: 1.5rem;
+  }
   .client-title {
     font-size: 1rem;
   }
