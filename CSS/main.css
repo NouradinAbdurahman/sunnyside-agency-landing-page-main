@@ -488,10 +488,24 @@ footer .social ul li a {
 
 @media screen and (max-width: 480px) {
   .mobile-menu {
+    display: block;
     width: 8%;
+    cursor: pointer;
+  }
+  .close-mobile {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    height: 60px;
   }
   .close-mobile-mene {
+    display: block;
     width: 8%;
+    cursor: pointer;
+    position: absolute;
+    content: " ";
+    top: 30%;
+    right: 5%;
   }
   .banner h1 {
     font-size: 3rem;
@@ -552,10 +566,24 @@ footer .social ul li a {
 
 @media screen and (max-width: 320px) {
   .mobile-menu {
+    display: block;
     width: 9%;
+    cursor: pointer;
+  }
+  .close-mobile {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    height: 60px;
   }
   .close-mobile-mene {
+    display: block;
     width: 7%;
+    cursor: pointer;
+    position: absolute;
+    content: " ";
+    top: 30%;
+    right: 2%;
   }
   .banner h1 {
     font-size: 2rem;
