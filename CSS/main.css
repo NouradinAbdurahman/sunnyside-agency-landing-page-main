@@ -68,7 +68,7 @@ header .logo img {
 .mobile-menu {
   display: none;
 }
-.close-mobile-menu {
+.close-mobile {
   display: none;
 }
 header nav ul {
@@ -378,6 +378,7 @@ footer .social ul li a {
     cursor: pointer;
   }
   .close-mobile {
+    display: block;
     position: relative;
     width: 100%;
     padding: 15px;
