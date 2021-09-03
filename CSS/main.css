@@ -70,6 +70,7 @@ header .logo img {
 }
 .close-mobile {
   display: none;
+  
 }
 header nav ul {
   display: flex;
