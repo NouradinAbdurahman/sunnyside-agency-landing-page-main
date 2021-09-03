@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap");
 
@@ -68,8 +69,9 @@ header .logo img {
 .mobile-menu {
   display: none;
 }
-.close-mobile-menu {
+.close-mobile {
   display: none;
+  
 }
 header nav ul {
   display: flex;
@@ -378,6 +380,7 @@ footer .social ul li a {
     cursor: pointer;
   }
   .close-mobile {
+    display: block;
     position: relative;
     width: 100%;
     padding: 15px;
